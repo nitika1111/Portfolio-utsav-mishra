@@ -1,0 +1,14 @@
+{
+  "name": "portfolio-utsavmishra",
+  "version": "1.0.0",
+  "description": "Utsav Mishra Portfolio Website",
+  "main": "index.js",
+  "scripts": {
+    "sass": "node-sass -w scss/ -o dist/css/ --recursive"
+  },
+  "author": "Utsav Mishra",
+  "license": "MIT",
+  "dependencies": {
+    "node-sass": "^6.0.0"
+  }
+}
