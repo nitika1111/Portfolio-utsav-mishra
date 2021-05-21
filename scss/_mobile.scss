@@ -1,0 +1,55 @@
+// Wide Screen XL
+@include mediaXl{
+    
+}
+// Desktop Screen Lg
+@include mediaLg{
+
+}
+// Tablet/ Small Laptops Screen Md
+@include mediaMd{
+    main{
+        align-items: center;
+        text-align: center;
+
+        .lg-heading{
+            line-height: 1;
+            margin-bottom: 1rem;
+        }
+    }
+
+    ul.menu-nav,
+    div.menu-branding {
+        float: none;
+        width: 100%;
+        min-height: 0;
+        &.show {
+            transform: translate3d(0, 0, 0);
+        }
+    }
+
+    .menu-nav {
+        height: 75vh;
+        transform: translate3d(-100% , 0 ,0);
+        font-size: 24px;
+    }
+
+    .menu-branding {
+        height: 25vh;
+        transform: translate3d(100% , 0 ,0);
+
+        .portrait {
+            background: url('../img/portrait_small.jpg');
+            width: 150px;
+            height: 150px;
+        }
+        
+    }
+}
+// Smart Phone Screen Sm
+@include mediaSm{
+
+    main#home h1 {
+        margin-top: 10vh;
+    }
+}
