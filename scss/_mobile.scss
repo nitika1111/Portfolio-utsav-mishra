@@ -72,6 +72,17 @@
         margin-top: 10vh;
     }
 
+    .menu-branding {
+        height: 25vh;
+        transform: translate3d(100% , 0 ,0);
+
+        .portrait {
+            background: url('../img/portrait_small.jpg');
+            width: 150px;
+            height: 150px;
+        }
+    }
+
     .projects-info {
         grid-template-columns: 1fr;
     }
