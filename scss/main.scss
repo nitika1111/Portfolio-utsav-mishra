@@ -53,6 +53,7 @@ header {
 
 main {
     padding: 4rem;
+
     //height: 100%;
     min-height: calc(100vh - #{$main-footer-height});
 
@@ -68,9 +69,94 @@ main {
     }
 
     &#home{
+        display: grid;
+        grid-template-areas: 
+        'r1c1 r1c1 r1c2'
+        'r2 r2 r2'
+        'r3c1 r3c2 r3c3';
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: 2fr 0.5fr 2.5fr;
+        grid-gap: 5px;
+        padding: 4rem;
         overflow: hidden;
+        background: rgba($primary-color,$background-opacity);
         h1 {
-            margin-top: 20vh;
+            margin-top: 3vh;
+        }
+        .r1-c1 {
+            grid-area: r1c1;
+            grid-column: 1/ span 2;
+        }
+        .r1-c2 {
+            grid-area: r1c2;
+            .bio-image {
+                margin: 0;
+                border-radius: 50%;
+                border: $secondary-color 3px solid;
+            }
+        }
+        .r2 {
+            grid-area: r2;
+            //grid-column: 1 / span 3;
+            background: rgba(lighten($primary-color,2) , 0.3);
+            //border-left: $secondary-color 2px solid;
+            padding: 0;
+            margin-bottom: 0;
+            align-self: left;
+
+            q {
+                font-size: 20px;
+                font-style: italic;
+                font-family: Verdana, Geneva, Tahoma, sans-serif;
+                text-align: left;
+                //padding: 10px;
+            }
+            q::before {
+                content: "\201C";
+
+            }
+            q::after {
+                content: "\201D";
+            }
+        }
+        .r3-c1 {
+            grid-area: r3c1;
+            background: lighten($color: $primary-color, $amount: 5);
+            padding: 0.5rem;
+            border-bottom: $secondary-color 5px solid;
+        }
+        .r3-c2 {
+            grid-area: r3c2;
+            background: lighten($color: $primary-color, $amount: 5);
+            padding: 0.5rem;
+            border-bottom: $secondary-color 5px solid;
+
+            
+        }
+        .r3-c3 {
+            grid-area: r3c3;
+            background: lighten($color: $primary-color, $amount: 5);
+            padding: 0.5rem;
+            border-bottom: $secondary-color 5px solid;
+        } 
+        .r3-head {
+            background: lighten($color: $primary-color, $amount: 2);
+            padding: 0.5rem;
+            border-top: $secondary-color 1px solid;
+            border-bottom: $secondary-color 1px solid;
+            text-align: center;
+            font-weight: 600;
+            font-size: 1.4rem;
+        }
+
+        .r3-detail-table {
+            width: 100%;
+            //tr:nth-child(even){background-color: #75745d;}
+            td {
+                //border: 1px solid #ddd;
+                padding: 18px;
+                font-size: 1.1rem;
+            }
         }
     }
 
@@ -81,9 +167,7 @@ main {
     grid-gap: 30px;
     grid-template-areas: 
     'bioimage bio bio'
-    'job1 job1 job1'
-    'job2 job2 job2'
-    'job3 job3 job3';
+    'job1 job1 job1';
     grid-template-columns: repeat(3, 1fr);
 
     .bio-image {
@@ -101,12 +185,6 @@ main {
     .job-1 {
         grid-area: job1;
     }
-    .job-2 {
-        grid-area: job2;
-    }
-    .job-3 {
-        grid-area: job3;
-    }
     
     .job {
         background: lighten($color: $primary-color, $amount: 5);
@@ -115,7 +193,7 @@ main {
     }
 
     ul {
-        list-style-type: disk;
+        list-style-type: "- ";
         text-align: left;
     }
     
@@ -156,7 +234,7 @@ main {
     }
 
     ul {
-        list-style-type: disk;
+        list-style-type: "- ";
         text-align: left;
     }
 }

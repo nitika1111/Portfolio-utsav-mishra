@@ -1,15 +1,15 @@
 // Wide Screen XL
 @include mediaXl{
-    .projects-info {
+    /* .projects-info {
         grid-template-columns: repeat(4, 1fr);
-    }
+    } */
 
 }
 // Desktop Screen Lg
 @include mediaLg{
-    .projects-info {
+    /* .projects-info {
         grid-template-columns: repeat(3, 1fr);
-    }
+    } */
 }
 // Tablet/ Small Laptops Screen Md
 @include mediaMd{
@@ -20,6 +20,22 @@
         .lg-heading{
             line-height: 1;
             margin-bottom: 1rem;
+        }
+
+        &#home {
+            grid-template-areas: 
+            'r1c1'
+            'r1c2'
+            'r2'
+            'r3c1'
+            'r3c2'
+            'r3c3';      
+            grid-template-columns: 1fr;
+            grid-gap: 3px;
+            padding: 1.1rem;  
+            .r2 {
+                margin: 0%;
+            }
         }
     }
 
@@ -54,15 +70,13 @@
         grid-template-areas: 
         'bioimage'
         'bio'
-        'job1'
-        'job2'
-        'job3';
+        'job1';
         grid-template-columns: 1fr;
     }
 
-    .projects-info {
+   /*  .projects-info {
         grid-template-columns: repeat(2, 1fr);
-    }
+    } */
 }
 
 // Smart Phone Screen Sm
@@ -83,7 +97,7 @@
         }
     }
 
-    .projects-info {
+    /* .projects-info {
         grid-template-columns: 1fr;
-    }
+    } */
 }
